@@ -14,6 +14,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Homepage from './pages/Homepage';
 import NoteListPage from './pages/NoteListPage';
 import NotePage from './pages/NotePage';
+import { SampleProvider } from './components/SampleContext';
+import ReducerSample from './components/ReducerSample';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -41,10 +44,14 @@ function App() {
       <Timer />
       <hr/>
       <Switch>
-        <Route path='/' exact={true} component={Homepage}/>
+        <Route path='/' exact={true} component={Homepage} />
         <Route path='/note/:postId' exact={true} component={NoteListPage} />
         <Route path='/note/' component={NotePage} />
       </Switch>
+      <SampleProvider>
+        <ReducerSample />
+      </SampleProvider>
+      <TodoList/>
     </BrowserRouter>
   );
 }

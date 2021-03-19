@@ -10,7 +10,7 @@ const IterationSample:React.FC = () => {
 
   const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(5);
-
+  
   const onChange = (e:React.ChangeEvent<HTMLInputElement>) => setInputText(e.target.value);
   const onClick = () => {
     const nextNames = names.concat({
@@ -27,7 +27,7 @@ const IterationSample:React.FC = () => {
     setNames(nextNames); // names의 배열을 새롭게 바꾼다.
   }
 
-  const namesList = names.map(name => <li key={name.id} onDoubleClick={() => {onRemove(name.id)}}>{name.text}</li>);
+  const namesList = names.map(name => <li key={name.id} style={{cursor: 'pointer'}} onDoubleClick={() => {onRemove(name.id)}}>{name.text}</li>);
   return (
     <>
       <input value={inputText} onChange={onChange} />
