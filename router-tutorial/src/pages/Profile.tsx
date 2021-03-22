@@ -1,5 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import WithRouterSample from '../components/WithRouterSample';
 
 type Data = {
   name:string
@@ -10,7 +12,7 @@ interface MatchParams {
   username:string
 }
 
-const profileData = {
+const profileData : { [key: string]: any } = {
   velopert: {
     name: '조도연',
     description: 'Frontend Engineer @ Laftel Inc.'
@@ -33,6 +35,7 @@ const Profile = ({ match } :RouteComponentProps<MatchParams>) => {
         {profile.name}({profile.name})
       </h3>
       <p>{profile.description}</p>
+      <WithRouterSample />
     </div>
   );
 }
