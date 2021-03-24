@@ -1,0 +1,14 @@
+.TodoItem .text {
+  cursor: pointer;
+}
+
+.TodoItem .text {
+  color: #999999;
+  text-decoration: line-throught;
+}
+
+.TodoItem .remove {
+  color: red;
+  margin-left: 4px;
+  cursor: pointer;
+}

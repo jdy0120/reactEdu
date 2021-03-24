@@ -17,7 +17,9 @@ import NotePage from './pages/NotePage';
 import { SampleProvider } from './components/SampleContext';
 import ReducerSample from './components/ReducerSample';
 import TodoList from './components/TodoList';
-
+import TodoFormContextApi from './components/contextApiTest/TodoForm';
+import TodoListContextApi from './components/contextApiTest/TodoList';
+import { TodosContextProvider } from './contexts/TodoContext';
 function App() {
   return (
     <BrowserRouter>
@@ -52,6 +54,11 @@ function App() {
         <ReducerSample />
       </SampleProvider>
       <TodoList/>
+      <hr/>
+      <TodosContextProvider>
+        <TodoFormContextApi />
+        <TodoListContextApi />
+      </TodosContextProvider>
     </BrowserRouter>
   );
 }
