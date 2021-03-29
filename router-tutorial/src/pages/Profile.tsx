@@ -1,12 +1,6 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom'
-import { withRouter } from 'react-router-dom';
 import WithRouterSample from '../components/WithRouterSample';
-
-type Data = {
-  name:string
-  description:string
-}
 
 interface MatchParams {
   username:string
